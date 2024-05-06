@@ -1,0 +1,19 @@
+﻿@model Persona
+
+
+@{
+    ViewData["Title"] = "Persone";
+}
+<div class="text-center">
+    <h1 class="display-4">Elenco Persone</h1>
+
+</div>
+<form asp-controller="Home" asp-action="AddPersona">
+<input asp-for="nome">
+<input asp-for="cognome">
+<input asp-for="email">
+<button type="submit">Aggiungi</button>
+</form>
+
+
+

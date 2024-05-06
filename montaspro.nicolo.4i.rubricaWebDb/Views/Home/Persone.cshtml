@@ -1,0 +1,24 @@
+﻿@model dbContext
+
+
+@{
+    ViewData["Title"] = "Persone";
+}
+<div class="text-center">
+    <h1 class="display-4">Elenco Persone</h1>
+
+</div>
+<a asp-controller="Home" asp-action="AddPersona">Aggiungi persona</a>
+<table>
+@{
+    foreach (var item in @Model.Persone)
+    {
+        <tr>
+        <td>@item.nome</td><td>@item.cognome</td><td>@item.email</td>
+        </tr>
+    }
+    
+}
+</table>
+
+
